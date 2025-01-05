@@ -16,7 +16,6 @@ export class OrdersController {
 
   @MessagePattern('findAllOrders')
   findAll(@Payload() paginationDto: PaginationDto) {
-    console.log(`${paginationDto}`)
     return this.ordersService.findAll(paginationDto);
   }
 
